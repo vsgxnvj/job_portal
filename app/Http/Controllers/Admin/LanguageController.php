@@ -8,6 +8,7 @@ use App\Services\Notify;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Traits\Searchable;
+use Illuminate\Http\RedirectResponse;
 
 class LanguageController extends Controller
 {
@@ -28,7 +29,7 @@ class LanguageController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
         return view('admin.language.create');
     }
@@ -36,7 +37,7 @@ class LanguageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->validate([
             'name' => ['required', 'max:255', 'unique:languages,name'],
@@ -62,7 +63,7 @@ class LanguageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id): View
     {
         $language = Language::findorfail($id);
 
@@ -72,7 +73,7 @@ class LanguageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id): RedirectResponse
     {
         $request->validate([
             'name' => ['required', 'max:255', 'unique:languages,name,' . $id],
