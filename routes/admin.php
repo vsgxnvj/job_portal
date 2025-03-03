@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\OrganizationTypeController;
 use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Admin\ProfessionController;
 use App\Models\State;
 use Illuminate\Support\Facades\Route;
 
@@ -90,5 +91,8 @@ Route::group(
 
         // Language routes
         route::resource('languages', LanguageController::class);
+
+        // Profession routes
+        route::resource('professions', ProfessionController::class);
     }
 );

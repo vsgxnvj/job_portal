@@ -121,6 +121,8 @@
                       <li class="{{ setsidebarActive(['admin.organization-type.*']) }}"><a class="nav-link" href="{{ route('admin.organization-type.index') }}">Organization Type</a></li>
                       <li class="{{ setsidebarActive(['admin.languages.*']) }}"><a class="nav-link" href="{{ route('admin.languages.index') }}">Languages</a></li>
 
+                      <li class="{{ setsidebarActive(['admin.professions.*']) }}"><a class="nav-link" href="{{ route('admin.professions.index') }}">Professions</a></li>
+
                   </ul>
               </li>
 
@@ -131,6 +133,7 @@
                         <li class="{{ setsidebarActive(['admin.countries.*']) }}"><a class="nav-link" href="{{ route('admin.countries.index') }}">Countries</a></li>
                        <li class="{{ setsidebarActive(['admin.states.*']) }}"><a class="nav-link" href="{{ route('admin.states.index') }}">States</a></li>
                        <li class="{{ setsidebarActive(['admin.cities.*']) }}"><a class="nav-link" href="{{ route('admin.cities.index') }}">Cities</a></li>
+
 
 
                   </ul>
