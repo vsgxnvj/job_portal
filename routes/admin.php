@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\OrganizationTypeController;
 use App\Http\Controllers\Admin\StateController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\ProfessionController;
+use App\Http\Controllers\Admin\SkillController;
 use App\Models\State;
 use Illuminate\Support\Facades\Route;
 
@@ -94,5 +95,8 @@ Route::group(
 
         // Profession routes
         route::resource('professions', ProfessionController::class);
+
+        // Skill routes
+        route::resource('skills', SkillController::class);
     }
 );
