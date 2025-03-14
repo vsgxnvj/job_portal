@@ -49,51 +49,11 @@
                                 aria-selected="false">Account Setting</button>
                         </li>
                     </ul>
+
+
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                            aria-labelledby="pills-home-tab">
 
-                            <form action="{{ route('company.profile-company-info') }}" method="POST"
-                                enctype="multipart/form-data">
-                                @csrf
-                                <div class="row">
-
-                                    <div class="col-md-6">
-
-                                        <div class="form-group">
-                                            <label class="font-sm color-text-mutted mb-10">Logo *</label>
-                                            <input class="form-control @error('logo') is-invalid @enderror" type="file"
-                                                name="logo">
-                                            @error('logo')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="font-sm color-text-mutted mb-10">Company Name *</label>
-                                            <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                                name="name" value="">
-                                            @error('name')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                                <div class="box-button mt-15">
-                                    <button class="btn btn-apply-big font-md font-bold">Save All Changes</button>
-                                </div>
-
-                            </form>
-
-
-                        </div>
+                        @include('frontend.candidate-dashboard.profile.sections.basic-section')
 
                         {{-- FOUNDING INFO --}}
                         {{-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -285,7 +245,6 @@
                                     <button class="btn btn-apply-big font-md font-bold">Save All Changes</button>
                                 </div>
                             </form>
-
 
                         </div> --}}
                         {{-- <div class="tab-pane fade" id="pills-contact" role="tabpanel"
